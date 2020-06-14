@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+// font is slurped from .Xresources
+static char *font; // = "Roboto Mono:pixelsize=25:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
