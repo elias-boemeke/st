@@ -121,9 +121,10 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
+	"black",
+        "white",
 	"#cccccc",
 	"#555555",
-	"black",
 };
 
 
@@ -131,10 +132,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultfg = 257;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 259;
 
 /*
  * Default shape of cursor
@@ -214,8 +215,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ ShiftMask,            Button4, kscrollup,      {.i = 3} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = 3} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
